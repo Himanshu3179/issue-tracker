@@ -18,7 +18,7 @@ export default async function Issues() {
                         <Table.ColumnHeaderCell className='hidden md:table-cell'>Created</Table.ColumnHeaderCell>
                     </Table.Row>
                 </Table.Header>
-                <Table.Body>                
+                <Table.Body>
                     {issues.map(issue => (
                         <Table.Row key={issue.id}>
                             <Table.RowHeaderCell>
@@ -41,3 +41,5 @@ export default async function Issues() {
         </div>
     )
 }
+
+export const dynamic = 'force-dynamic';

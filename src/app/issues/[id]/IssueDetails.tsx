@@ -11,7 +11,7 @@ export default function IssueDetails({issue}:{issue:Issue}) {
         <IssueStatusBadge status={issue.status} />
         <Text>{issue.createdAt.toLocaleString()}</Text>
       </Flex>
-      <Card className="prose"> 
+      <Card className="prose max-w-full"> 
         <ReactMarkdown>{issue.description}</ReactMarkdown>
       </Card>
     </>
