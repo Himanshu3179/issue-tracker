@@ -6,7 +6,9 @@ import React from 'react'
 import IssueActions from './IssueActions';
 
 export default async function Issues() {
+
     const issues = await prisma.issue.findMany();
+    console.log(issues)
     return (
         <div>
             <IssueActions />

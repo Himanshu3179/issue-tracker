@@ -32,9 +32,11 @@ export default function DeleteIssueButton({ issueId }: { issueId: string }) {
         <>
             <AlertDialog.Root>
                 <AlertDialog.Trigger>
-                    <Button className='w-full bg-red-500'
-                        disabled={deleting}
-                    >
+                    <Button className='w-full
+                        bg-red-500
+                        disabled:bg-gray-200
+                        disabled:text-gray-400
+                    ' disabled={deleting}>
                         <CrossCircledIcon />
                         Delete Issue
                         {deleting && <Spinner />}

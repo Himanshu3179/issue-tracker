@@ -38,10 +38,12 @@ export default function IssueForm({ issue }: { issue?: Issue }) {
             router.push("/issues")
             router.refresh();
 
-        } catch (error) {
-            setSubmitting(false)
-            console.log(error)
-            setError('An unexpected error occurred')
+        } catch (e) {
+            setSubmitting(false);
+            if (e instanceof Error) {
+                console.log(e.message)
+                setError(e.message);
+            }
         }
     })
 

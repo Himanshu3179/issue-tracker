@@ -14,8 +14,8 @@ export const IssueStatusBadge = ({ status }: { status: Status }) => {
     <div>
       <Badge color={statusMap[status].color}>
         {statusMap[status].label}
+        
       </Badge>
-
     </div>
   )
 }
